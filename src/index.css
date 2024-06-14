@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+
+  .container {
+    @apply mx-auto my-0 px-8 sm:px-12 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
+  }
+
+  .custom-gradient {
+    @apply bg-custom-gradient bg-200% bg-right transition-all duration-300;
+  }
+
+  .custom-gradient:hover {
+    @apply bg-left;
+  }
+  .button-card {
+    @apply flex items-center justify-center px-2 py-1 bg-slate-black text-lg md:text-xl font-medium gap-1 md:gap-2 rounded-md transition-all duration-300 cursor-pointer;
+  }
+}
