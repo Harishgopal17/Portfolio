@@ -11,19 +11,19 @@ function App() {
     <>
       <Navbar />
       <main className="min-h-screen container relative text-white">
-        <section>
+        <section className="mb-20">
           <Hero />
         </section>
-        <section className="mt-16">
+        <section className="mb-20">
           <About />
         </section>
-        <section className="mt-16">
+        <section className="mb-20">
           <Skills />
         </section>
-        <section className="mt-16">
+        <section className="mb-20">
           <Project />
         </section>
-        <section className="mt-16 mb-10">
+        <section className="mb-16">
           <Contact />
         </section>
       </main>

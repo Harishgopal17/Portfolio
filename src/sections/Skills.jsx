@@ -9,7 +9,10 @@ export default function Skills() {
   return (
     <>
       <div className="flex my-5 lg:py-4">
-        <h2 id="skills" className="text-green text-2xl font-medium">
+        <h2
+          id="skills"
+          className="text-green text-2xl font-medium scroll-mt-[100px]"
+        >
           Skills
         </h2>
       </div>
@@ -17,13 +20,13 @@ export default function Skills() {
         <Marquee pauseOnHover pauseOnClick>
           <SkillCard
             values={{
-              icon: <AiFillHtml5 size={60} color="#FF5733" />,
+              icon: <AiFillHtml5 size={60} color="#e34c26" />,
               name: "Html",
             }}
           />
           <SkillCard
             values={{
-              icon: <IoLogoCss3 size={60} color="#2965f1" />,
+              icon: <IoLogoCss3 size={60} color="#2196f3" />,
               name: "CSS",
             }}
           />

@@ -10,15 +10,59 @@ export default function Contact() {
 
   const toggleBtn = () => setBtnMove(!btnMove);
 
+  // const sendMail = async (e) => {
+  //   try {
+  //     e.preventDefault();
+  //     toggleBtn();
+  //     alert("working");
+  //   } catch (err) {
+  //     console.error(`Error while sending mail : ${err}`);
+  //   }
+  // };
+
+  // $("#submit-form").submit((e) => {
+  //   e.preventDefault();
+  //   $.ajax({
+  //     url: "https://script.google.com/macros/s/AKfycbyvCeqGX_IkJ0J1Kwwk8O-8Au59aZWxYXFtd4l-o-IFHuH_7VTt00gdiS2l8mb4cbDR/exec",
+  //     data: $("#submit-form").serialize(),
+  //     method: "post",
+  //     success: function (response) {
+  //       // window.location.reload();
+  //       setBtnMove(true);
+  //     },
+  //     error: function (err) {
+  //       alert("Something went wrong");
+  //     },
+  //   });
+  // });
+
+  $("#submit-form").submit((e) => {
+    e.preventDefault(); // Prevent the default form submission
+
+    $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbyvCeqGX_IkJ0J1Kwwk8O-8Au59aZWxYXFtd4l-o-IFHuH_7VTt00gdiS2l8mb4cbDR/exec",
+      data: $("#submit-form").serialize(),
+      method: "post",
+      success: function (response) {
+        setBtnMove(true); // Your custom function to handle button animation
+        alert("Form submitted successfully!"); // Notify the user
+        $("#submit-form")[0].reset(); // Clear the form fields
+      },
+      error: function (err) {
+        alert("Something went wrong");
+      },
+    });
+  });
+
   return (
     <>
-      <div id="contact" className="flex my-5 lg:py-4">
+      <div id="contact" className="flex my-5 lg:py-4 scroll-mt-[100px]">
         <h2 className="text-green text-2xl font-medium">Contact</h2>
       </div>
       <div className="w-full grid grid-cols-1 gap-y-16 lg:grid-cols-3 lg:gap-20">
         <div className="lg:col-span-2">
-          <div className="border border-[#1f2129] rounded-lg p-6 md:p-8">
-            <form>
+          <div className="border border-[#1f2129] rounded-lg py-6 px-3 md:p-8">
+            <form id="submit-form">
               <div className="mb-4">
                 <label
                   htmlFor="name"
@@ -29,6 +73,8 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
+                  placeholder="Full Name"
+                  name="Name"
                   className="w-full md:w-[70%] p-2 border border-[#1f2129af] bg-slate-black outline-none text-base rounded-md  focus:border-[#16f2b3]"
                   required
                 />
@@ -41,10 +87,11 @@ export default function Contact() {
                   Email :
                 </label>
                 <input
-                  type="text"
+                  type="email"
                   id="email"
+                  placeholder="name@domain.com"
+                  name="Email"
                   className="w-full md:w-[70%] p-2 border border-[#1f2129af] bg-slate-black outline-none text-base rounded-md  focus:border-[#16f2b3]"
-                  required
                 />
               </div>
               <div className="mb-4">
@@ -57,11 +104,14 @@ export default function Contact() {
                 <textarea
                   cols="30"
                   rows="4"
+                  placeholder="Write something..."
+                  name="Message from Protfolio"
                   className="w-full md:w-[70%] p-2 border border-[#1f2129af] bg-slate-black outline-none text-base rounded-md  focus:border-[#16f2b3]"
                 ></textarea>
               </div>
-              <div
-                onClick={toggleBtn}
+              <button
+                type="submit"
+                // onClick={toggleBtn}
                 // onMouseEnter={toggleBtn}
                 // onMouseLeave={toggleBtn}
                 className="cursor-pointer relative h-10 w-24 overflow-hidden text-green text-lg font-medium rounded-3xl bg-gradient-to-r from-gray-900 to-slate-black transition-all duration-300 hover:bg-gradient-to-t hover:from-gray-800 to bg-gray-900"
@@ -84,7 +134,7 @@ export default function Contact() {
                 >
                   <IoMdSend size={25} />
                 </div>
-              </div>
+              </button>
             </form>
           </div>
         </div>
@@ -93,19 +143,25 @@ export default function Contact() {
             Connect with me
           </h4>
           <div className="flex gap-8 items-center">
-            <a href="https://github.com/Harishgopal17">
+            <a href="https://github.com/Harishgopal17" target="_blank">
               <AiFillGithub
                 size={45}
                 className="bg-black text-white rounded-full cursor-pointer transition-all duration-300 hover:scale-[1.1]"
               />
             </a>
-            <a href="https://www.linkedin.com/in/harish-b-g-5b8060265/">
+            <a
+              href="https://www.linkedin.com/in/harish-b-g-5b8060265/"
+              target="_blank"
+            >
               <AiFillLinkedin
                 size={40}
                 className="bg-white text-linkedin-color rounded-md cursor-pointer transition-all duration-300 hover:scale-[1.1]"
               />
             </a>
-            <a href="">
+            <a
+              href="https://www.instagram.com/harish_gopal_17/"
+              target="_blank"
+            >
               <AiOutlineInstagram
                 size={40}
                 className="bg-[#f0466f] text-white rounded-lg cursor-pointer transition-all duration-300 hover:scale-[1.1]"

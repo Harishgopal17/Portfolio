@@ -50,10 +50,10 @@ export default function Navbar() {
                 : "fixed top-[-100%] left-0 right-0 w-full h-[auto] z-20 ease duration-[600ms]"
             }
           >
-            <ul className="flex flex-col justify-center items-center mt-[90px] font-[400] text-[20px] bg-black">
+            <ul className="flex flex-col justify-center items-center mt-[78px] font-[400] text-[20px] bg-black">
               {navLinks.map((nav) => (
                 <li
-                  className="px-8 py-2 mb-2 border-b border-slate-gray w-full"
+                  className="px-10 py-3 border-b border-slate-gray w-full"
                   key={nav.label}
                 >
                   <a onClick={toggleMenu} href={nav.href}>

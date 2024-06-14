@@ -3,7 +3,10 @@ export default function About() {
     <>
       <div className="w-full flex justify-center items-center">
         <div className="flex flex-col gap-8">
-          <h2 id="about" className="text-green text-2xl font-medium">
+          <h2
+            id="about"
+            className="text-green text-2xl font-medium scroll-mt-[100px]"
+          >
             About
           </h2>
           <div className="flex flex-col gap-7 text-base lg:text-lg lg:leading-8 font-normal leading-7 text-slate-white">

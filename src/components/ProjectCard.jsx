@@ -22,7 +22,7 @@ export default function ProjectCard({ projects }) {
               >
                 <a
                   href={project.projectURL}
-                  target="blank"
+                  target="_blank"
                   className="flex items-center gap-1 text-lg font-bold"
                 >
                   <span className="border-b border-transparent hover:border-white">
@@ -31,7 +31,7 @@ export default function ProjectCard({ projects }) {
                   <AiOutlineLink size={22} />
                 </a>
                 <div>
-                  <a href={project.githubURL} target="blank">
+                  <a href={project.githubURL} target="_blank">
                     <AiFillGithub size={30} />
                   </a>
                 </div>

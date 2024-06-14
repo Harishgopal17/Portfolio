@@ -31,7 +31,7 @@ body {
   }
 
   .container {
-    @apply mx-auto my-0 px-8 sm:px-12 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
+    @apply mx-auto my-0 px-6 sm:px-12 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
   }
 
   .custom-gradient {

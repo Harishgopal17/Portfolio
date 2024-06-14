@@ -14,13 +14,13 @@ export default function Hero() {
       <header className="w-full flex items-center justify-center min-h-screen">
         <div className="w-full pt-[100px] grid grid-cols-1 gap-y-8 items-start lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center flex-col">
-            <p className="text-green text-[24px] lg:text-[32px] font-medium leading-none">
+            <p className="text-green text-[18px] mb-2 lg:mb-0 lg:text-[32px] font-medium leading-none">
               Hey there!, I'm-
             </p>
-            <h1 className="text-[52px] md:text-[72px] lg:text-[96px] font-bold leading-none mb-3">
+            <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-bold leading-none mb-3">
               Harish :&#x29;
             </h1>
-            <p className="text-slate-gray text-[28px] lg:text-[36px] font-medium mb-8">
+            <p className="text-slate-gray text-[22px] lg:text-[36px] font-medium mb-8">
               <ReactTyped
                 strings={[
                   `A self-taught <span class=text-green>Web Developer</span>`,
@@ -29,22 +29,22 @@ export default function Hero() {
               />
             </p>
             <div className="flex gap-7 mb-8 ">
-              <Link
-                to="https://github.com/Harishgopal17"
-                target="blank"
+              <a
+                href="https://github.com/Harishgopal17"
+                target="_blank"
                 className="button-card hover:text-black hover:bg-white"
               >
                 <AiFillGithub size={25} />
                 <span className="max-sm:hidden">Github</span>
-              </Link>
-              <Link
-                to="https://www.linkedin.com/in/harish-b-g-5b8060265/"
-                target="blank"
+              </a>
+              <a
+                href="https://www.linkedin.com/in/harish-b-g-5b8060265/"
+                target="_blank"
                 className="button-card hover:text-linkedin-color hover:bg-white"
               >
                 <AiFillLinkedin size={25} />
                 <span className="max-sm:hidden">LinkedIn</span>
-              </Link>
+              </a>
               <a
                 href="#contact"
                 className="button-card hover:text-email-color hover:bg-white"
@@ -102,6 +102,8 @@ export default function Hero() {
                     <span className="text-amber-300">Node Js</span>
                     <span className="text-gray-400">{"', '"}</span>
                     <span className="text-amber-300">Tailwind CSS</span>
+                    <span className="text-gray-400">{"', '"}</span>
+                    <span className="text-amber-300">Bootstrap</span>
                     <span className="text-gray-400">{"'],"}</span>
                   </div>
                   <div>
