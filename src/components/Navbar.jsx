@@ -20,7 +20,7 @@ export default function Navbar() {
                 className="w-24 h-10 max-md:w-8 max-md:h-8"
               />
             </a>
-            <a className="font-[400] text-[30px] max-md:text-3xl" href="/">
+            <a className="font-[400] text-[30px] max-md:text-[24px]" href="/">
               HARISH
             </a>
           </div>
