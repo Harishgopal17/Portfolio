@@ -6,6 +6,7 @@ import {
 } from "react-icons/ai";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { photo } from "../constants/index";
 
 export default function Contact() {
   const form = useRef();
@@ -146,6 +147,15 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex justify-center items-center flex-col gap-5">
+          <div className="flex items-center justify-center">
+            <img
+              src={photo.imgURl}
+              alt={photo.title}
+              width={150}
+              height={150}
+              className="rounded-full grayscale-[70%] transition-all duration-300 hover:grayscale-[0%]"
+            />
+          </div>
           <h4 className="text-shade-green text-2xl font-semibold">
             Connect with me
           </h4>

@@ -2,6 +2,7 @@ import madrasfoodadvisor from "../assets/images/madrasfoodadvisor.png";
 import breaktheroutine from "../assets/images/breaktheroutine.png";
 import harishLogo from "../assets/icons/harishLogo.png";
 import resumefile from "../assets/resume/Harish_Resume.pdf";
+import harishPhoto from "../assets/images/Photo_WhiteBG.png";
 
 export const logo = {
   imgURL: harishLogo,
@@ -9,6 +10,7 @@ export const logo = {
 };
 
 export const navLinks = [
+  { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#Projects", label: "Projects" },
@@ -40,3 +42,8 @@ export const projects = [
     tools: ["Html", "CSS", "Java Script", "Web API", "Fetch API"],
   },
 ];
+
+export const photo = {
+  imgURl: harishPhoto,
+  title: "Photo of Harish",
+};

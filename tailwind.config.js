@@ -46,6 +46,10 @@ export default {
         right: "right",
         left: "left",
       },
+      grayscale: {
+        70: "70%",
+        0: "0%",
+      },
     },
   },
   plugins: [],

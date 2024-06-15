@@ -11,7 +11,10 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <>
-      <header className="w-full flex items-center justify-center min-h-screen">
+      <header
+        id="home"
+        className="w-full flex items-center justify-center min-h-screen"
+      >
         <div className="w-full pt-[100px] grid grid-cols-1 gap-y-8 items-start lg:grid-cols-2 lg:gap-20">
           <div className="flex justify-center flex-col">
             <p className="text-green text-[18px] mb-2 lg:mb-0 lg:text-[32px] font-medium leading-none">

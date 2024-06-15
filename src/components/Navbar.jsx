@@ -24,7 +24,7 @@ export default function Navbar() {
               HARISH
             </a>
           </div>
-          <ul className="flex justify-center items-center gap-10 max-md:hidden font-[500] text-[20px]">
+          <ul className="flex justify-center items-center gap-8 max-md:hidden font-[500] text-[20px]">
             {navLinks.map((nav) => (
               <a key={nav.label} href={nav.href}>
                 <li className="px-3 py-1 custom-gradient hover:text-black">
