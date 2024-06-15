@@ -153,7 +153,7 @@ export default function Contact() {
               alt={photo.title}
               width={150}
               height={150}
-              className="rounded-full grayscale-[70%] transition-all duration-300 hover:grayscale-[0%]"
+              className="rounded-full grayscale-[70%] opacity-60 transition-all duration-300 hover:grayscale-[0%] hover:opacity-100"
             />
           </div>
           <h4 className="text-shade-green text-2xl font-semibold">
