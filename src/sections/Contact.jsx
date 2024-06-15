@@ -15,26 +15,22 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    toggleBtn();
-    setTimeout(() => {
-      window.location.reload();
-    }, 800);
 
-    // emailjs
-    //   .sendForm("service_ghftr0a", "template_td8jald", form.current, {
-    //     publicKey: "wxs0rB0wk6y3pAzJL",
-    //   })
-    //   .then(
-    //     () => {
-    //       toggleBtn();
-    //       setTimeout(() => {
-    //         window.location.reload();
-    //       }, 800);
-    //     },
-    //     (error) => {
-    //       alert("FAILED...", error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm("service_ghftr0a", "template_td8jald", form.current, {
+        publicKey: "wxs0rB0wk6y3pAzJL",
+      })
+      .then(
+        () => {
+          toggleBtn();
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        },
+        (error) => {
+          alert("FAILED...", error.text);
+        }
+      );
   };
 
   // const sendMail = async (e) => {
@@ -85,7 +81,7 @@ export default function Contact() {
                   placeholder="Full Name"
                   name="from_name"
                   className="w-full md:w-[70%] p-2 border border-[#1f2129af] bg-slate-black outline-none text-base rounded-md  focus:border-[#16f2b3]"
-                  require
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -101,7 +97,7 @@ export default function Contact() {
                   placeholder="name@domain.com"
                   name="from_email"
                   className="w-full md:w-[70%] p-2 border border-[#1f2129af] bg-slate-black outline-none text-base rounded-md  focus:border-[#16f2b3]"
-                  require
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -117,7 +113,7 @@ export default function Contact() {
                   placeholder="Write something..."
                   name="message"
                   className="w-full md:w-[70%] p-2 border border-[#1f2129af] bg-slate-black outline-none text-base rounded-md  focus:border-[#16f2b3]"
-                  require
+                  required
                 />
               </div>
               <button
