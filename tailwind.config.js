@@ -47,7 +47,7 @@ export default {
         left: "left",
       },
       grayscale: {
-        70: "70%",
+        50: "50%",
         0: "0%",
       },
     },
