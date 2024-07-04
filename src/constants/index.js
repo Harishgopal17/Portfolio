@@ -1,5 +1,6 @@
 import madrasfoodadvisor from "../assets/images/madrasfoodadvisor.png";
 import breaktheroutine from "../assets/images/breaktheroutine.png";
+import taskburst from "../assets/images/taskburst.png";
 import harishLogo from "../assets/icons/harishLogo.png";
 import resumefile from "../assets/resume/Harish_Resume.pdf";
 import harishPhoto from "../assets/images/Photo_WhiteBG.png";
@@ -40,6 +41,15 @@ export const projects = [
     projectURL: "https://breaktheroutine.netlify.app/",
     githubURL: "https://github.com/Harishgopal17/break_the_routine",
     tools: ["Html", "CSS", "Java Script", "Web API", "Fetch API"],
+  },
+  {
+    imgURL: taskburst,
+    name: "Task Burst",
+    description:
+      "A simple and efficient to-do list app to help you manage daily tasks. Tasks are stored in the browser's local storage, ensuring data persistence even after refreshing or closing the browser.",
+    projectURL: "https://taskburst.netlify.app/",
+    githubURL: "https://github.com/Harishgopal17/TaskBurst",
+    tools: ["React", "Tailwind CSS"],
   },
 ];
 
