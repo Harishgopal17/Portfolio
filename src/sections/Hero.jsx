@@ -15,7 +15,7 @@ export default function Hero() {
         id="home"
         className="w-full flex items-center justify-center min-h-screen"
       >
-        <div className="w-full pt-[100px] grid grid-cols-1 gap-y-8 items-start lg:grid-cols-2 lg:gap-20">
+        <div className="w-full pt-[100px] grid grid-cols-1 gap-y-8 items-start lg:grid-cols-2 lg:gap-28">
           <div className="flex justify-center flex-col">
             <p className="text-green text-[18px] mb-2 lg:mb-0 lg:text-[32px] font-medium leading-none">
               Hey there!, I'm-
@@ -23,13 +23,20 @@ export default function Hero() {
             <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-bold leading-none mb-3">
               Harish :&#x29;
             </h1>
-            <p className="text-slate-gray text-[22px] lg:text-[36px] font-medium mb-8">
-              <ReactTyped
-                strings={[
-                  `A self-taught <span class=text-green>Web Developer</span>`,
-                ]}
-                typeSpeed={60}
-              />
+            <p className="text-slate-gray text-[22px] lg:text-[34px] font-medium mb-8">
+              A self-taught{" "}
+              <span className="text-green">
+                <ReactTyped
+                  strings={[
+                    "Web Developer",
+                    "Frontend Developer",
+                    "ReactJS Developer",
+                  ]}
+                  typeSpeed={40}
+                  backSpeed={50}
+                  loop
+                />
+              </span>
             </p>
             <div className="flex gap-7 mb-8 ">
               <a
@@ -98,11 +105,11 @@ export default function Hero() {
                     <span className="text-gray-400">{"', '"}</span>
                     <span className="text-amber-300">CSS</span>
                     <span className="text-gray-400">{"', '"}</span>
-                    <span className="text-amber-300">Java Script</span>
+                    <span className="text-amber-300">JavaScript</span>
                     <span className="text-gray-400">{"', '"}</span>
-                    <span className="text-amber-300">React Js</span>
+                    <span className="text-amber-300">ReactJS</span>
                     <span className="text-gray-400">{"', '"}</span>
-                    <span className="text-amber-300">Node Js</span>
+                    <span className="text-amber-300">NodeJS</span>
                     <span className="text-gray-400">{"', '"}</span>
                     <span className="text-amber-300">Tailwind CSS</span>
                     <span className="text-gray-400">{"', '"}</span>
