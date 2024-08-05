@@ -23,9 +23,9 @@ export default function Hero() {
             <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-bold leading-none mb-3">
               Harish :&#x29;
             </h1>
-            <p className="text-slate-gray text-[22px] lg:text-[34px] font-medium mb-8">
+            <p className="text-slate-gray text-[22px] lg:text-[28px] font-medium mb-8">
               A self-taught{" "}
-              <span className="text-green">
+              <span className="text-green lg:text-[32px]">
                 <ReactTyped
                   strings={[
                     "Web Developer",

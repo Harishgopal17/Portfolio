@@ -20,7 +20,7 @@ export default function Skills() {
         <Marquee pauseOnHover pauseOnClick>
           <SkillCard
             values={{
-              icon: <AiFillHtml5 size={60} color="#e34c26" />,
+              icon: <AiFillHtml5 size={60} color="#e96228" />,
               name: "Html",
             }}
           />
