@@ -18,7 +18,7 @@ export default function About() {
     },
   };
 
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-80px" });
 
   return (
     <>
