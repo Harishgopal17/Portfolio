@@ -6,7 +6,35 @@ import {
 import { BiLogoGmail } from "react-icons/bi";
 import { ReactTyped } from "react-typed";
 import { resume } from "../constants/index";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const textvariant = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+const skillVariant = {
+  initial: {
+    scale: 0.8,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 export default function Hero() {
   return (
@@ -16,14 +44,28 @@ export default function Hero() {
         className="w-full flex items-center justify-center min-h-screen"
       >
         <div className="w-full pt-[100px] grid grid-cols-1 gap-y-8 items-start lg:grid-cols-2 lg:gap-28">
-          <div className="flex justify-center flex-col">
-            <p className="text-green text-[18px] mb-2 lg:mb-0 lg:text-[32px] font-medium leading-none">
+          <motion.div
+            variants={textvariant}
+            initial="initial"
+            animate="animate"
+            className="flex justify-center flex-col"
+          >
+            <motion.p
+              variants={textvariant}
+              className="text-green text-[18px] mb-2 lg:mb-0 lg:text-[32px] font-medium leading-none"
+            >
               Hey there!, I'm-
-            </p>
-            <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-bold leading-none mb-3">
+            </motion.p>
+            <motion.h1
+              variants={textvariant}
+              className="text-[48px] md:text-[72px] lg:text-[96px] font-bold leading-none mb-3"
+            >
               Harish :&#x29;
-            </h1>
-            <p className="text-slate-gray text-[22px] lg:text-[28px] font-medium mb-8">
+            </motion.h1>
+            <motion.p
+              variants={textvariant}
+              className="text-slate-gray text-[22px] lg:text-[28px] font-medium mb-8"
+            >
               A self-taught{" "}
               <span className="text-green lg:text-[32px]">
                 <ReactTyped
@@ -35,10 +77,11 @@ export default function Hero() {
                   typeSpeed={40}
                   backSpeed={50}
                   loop
+                  startDelay={700}
                 />
               </span>
-            </p>
-            <div className="flex gap-7 mb-8 ">
+            </motion.p>
+            <motion.div variants={textvariant} className="flex gap-7 mb-8 ">
               <a
                 href="https://github.com/Harishgopal17"
                 target="_blank"
@@ -62,8 +105,11 @@ export default function Hero() {
                 <BiLogoGmail size={25} />
                 <span className="max-sm:hidden">Mail</span>
               </a>
-            </div>
-            <div className="flex-1 flex items-center">
+            </motion.div>
+            <motion.div
+              variants={textvariant}
+              className="flex-1 flex items-center"
+            >
               <a
                 href={resume.fileURL}
                 target="blank"
@@ -73,10 +119,15 @@ export default function Hero() {
                 <span>Resume</span>
                 <AiOutlineDownload size={25} />
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <div className="flex-1 flex justify-center items-center ">
-            <div className="border border-[#1b2c68a0] rounded-lg bg-gradient-to-r to-[#0a0d37]">
+            <motion.div
+              // variants={skillVariant}
+              // initial="initial"
+              // animate="animate"
+              className="border border-[#1b2c68a0] rounded-lg bg-gradient-to-r to-[#0a0d37]"
+            >
               <div className="px-4 py-5 lg:px-8">
                 <div className="flex flex-row space-x-2">
                   <div className="h-3 w-3 rounded-full bg-[#ff605c]"></div>
@@ -177,7 +228,7 @@ export default function Hero() {
                   </div>
                 </code>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </header>

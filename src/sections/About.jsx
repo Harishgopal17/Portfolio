@@ -1,8 +1,34 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 export default function About() {
+  const ref = useRef(null);
+
+  const variant = {
+    initial: {
+      y: 500,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+  };
+
+  const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <>
-      <div className="w-full flex justify-center items-center">
-        <div className="flex flex-col gap-8">
+      <div ref={ref} className="w-full flex justify-center items-center">
+        <motion.div
+          variants={variant}
+          initial="initial"
+          animate={isInView && "animate"}
+          className="flex flex-col gap-8"
+        >
           <h2
             id="about"
             className="text-green text-2xl font-medium scroll-mt-[100px]"
@@ -25,7 +51,7 @@ export default function About() {
               digital experiences that leave a lasting impact on users.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
