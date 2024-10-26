@@ -4,6 +4,8 @@ import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
 import { FaNode, FaBootstrap } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { SiFramer } from "react-icons/si";
 
 export default function Skills() {
   return (
@@ -58,6 +60,12 @@ export default function Skills() {
             values={{
               icon: <FaBootstrap size={60} color="#7952b3" />,
               name: "Bootstrap",
+            }}
+          />
+          <SkillCard
+            values={{
+              icon: <SiFramer size={50} color="#fff" />,
+              name: "Framer Motion",
             }}
           />
           <SkillCard

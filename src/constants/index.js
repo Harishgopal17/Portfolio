@@ -57,3 +57,5 @@ export const photo = {
   imgURl: harishPhoto,
   title: "Photo of Harish",
 };
+
+// Developed a user-friendly, responsive website for Shree Senthil Kumaran Electricals, an electrical and hardware shop based in Tamil Nadu. The project involved creating a cohesive digital identity for the shop, including a tailored design with custom sections highlighting their product offerings, unique selling points, and customer testimonials. By focusing on clean layout, intuitive navigation, and effective content, the site effectively showcases the brand’s commitment to quality and affordability. Targeted towards homeowners, contractors, and electricians, the website is optimized for both user experience and SEO to increase local visibility.

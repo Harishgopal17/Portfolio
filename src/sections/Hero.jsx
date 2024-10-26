@@ -43,7 +43,7 @@ export default function Hero() {
         id="home"
         className="w-full flex items-center justify-center min-h-screen"
       >
-        <div className="w-full pt-[100px] grid grid-cols-1 gap-y-8 items-start lg:grid-cols-2 lg:gap-28">
+        <div className="w-full pt-[100px] grid grid-cols-1 items-center gap-y-8 lg:grid-cols-2 lg:gap-28">
           <motion.div
             variants={textvariant}
             initial="initial"
@@ -165,6 +165,10 @@ export default function Hero() {
                     <span className="text-amber-300">Tailwind CSS</span>
                     <span className="text-gray-400">{"', '"}</span>
                     <span className="text-amber-300">Bootstrap</span>
+                    <span className="text-gray-400">{"', '"}</span>
+                    <span className="text-amber-300">Framer Motion</span>
+                    <span className="text-gray-400">{"', '"}</span>
+                    <span className="text-amber-300">Git</span>
                     <span className="text-gray-400">{"'],"}</span>
                   </div>
                   <div>

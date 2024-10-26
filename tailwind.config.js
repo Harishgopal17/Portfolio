@@ -27,7 +27,7 @@ export default {
         "shade-green": "#3ccf91",
         "slate-black": "#212529",
         "slate-gray": "#868e96 ",
-        "slate-white": "#e5e7eb",
+        "slate-white": "#ececec",
         "linkedin-color": "#0072b1",
         "email-color": "#EA4335",
       },

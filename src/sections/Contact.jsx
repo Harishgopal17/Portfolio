@@ -7,6 +7,37 @@ import {
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { photo } from "../constants/index";
+import { motion, useInView } from "framer-motion";
+
+const formVariant = {
+  initial: {
+    x: "-100vw",
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const profileVariant = {
+  initial: {
+    x: "100vw",
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 export default function Contact() {
   const form = useRef();
@@ -25,7 +56,7 @@ export default function Contact() {
         () => {
           toggleBtn();
           setTimeout(() => {
-            window.location.reload();
+            window.history.go(0);
           }, 800);
         },
         (error) => {
@@ -33,6 +64,9 @@ export default function Contact() {
         }
       );
   };
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-100px" });
 
   // const sendMail = async (e) => {
   //   try {
@@ -62,14 +96,29 @@ export default function Contact() {
 
   return (
     <>
-      <div id="contact" className="flex my-5 lg:py-4 scroll-mt-[100px]">
-        <h2 className="text-green text-2xl font-medium">Contact</h2>
-      </div>
-      <div className="w-full grid grid-cols-1 gap-y-16 lg:grid-cols-3 lg:gap-20">
-        <div className="lg:col-span-2">
+      <motion.div
+        ref={ref}
+        id="contact"
+        className="flex my-5 lg:py-4 scroll-mt-[100px]"
+      >
+        <motion.h2
+          variants={formVariant}
+          initial="initial"
+          animate={isInView && "animate"}
+          className="text-green text-2xl font-medium"
+        >
+          Contact
+        </motion.h2>
+      </motion.div>
+      <motion.div
+        initial="initial"
+        animate={isInView && "animate"}
+        className="w-full grid grid-cols-1 gap-y-16 lg:grid-cols-3 lg:gap-20"
+      >
+        <motion.div variants={formVariant} className="lg:col-span-2">
           <div className="border border-[#1f2129] rounded-lg py-6 px-3 md:p-8">
             <form ref={form} onSubmit={sendEmail}>
-              <div className="mb-4">
+              <motion.div variants={formVariant} className="mb-4">
                 <label
                   htmlFor="name"
                   className="block mb-2 text-lg font-semibold"
@@ -84,8 +133,8 @@ export default function Contact() {
                   className="w-full md:w-[70%] p-2 border border-[#1f2129af] bg-slate-black outline-none text-base rounded-md  focus:border-[#16f2b3]"
                   required
                 />
-              </div>
-              <div className="mb-4">
+              </motion.div>
+              <motion.div variants={formVariant} className="mb-4">
                 <label
                   htmlFor="email"
                   className="block mb-2 text-lg font-semibold"
@@ -100,8 +149,8 @@ export default function Contact() {
                   className="w-full md:w-[70%] p-2 border border-[#1f2129af] bg-slate-black outline-none text-base rounded-md  focus:border-[#16f2b3]"
                   required
                 />
-              </div>
-              <div className="mb-4">
+              </motion.div>
+              <motion.div variants={formVariant} className="mb-4">
                 <label
                   htmlFor="message"
                   className="block mb-2 text-lg font-semibold"
@@ -116,7 +165,7 @@ export default function Contact() {
                   className="w-full md:w-[70%] p-2 border border-[#1f2129af] bg-slate-black outline-none text-base rounded-md  focus:border-[#16f2b3]"
                   required
                 />
-              </div>
+              </motion.div>
               <button
                 type="submit"
                 // onClick={toggleBtn}
@@ -145,9 +194,15 @@ export default function Contact() {
               </button>
             </form>
           </div>
-        </div>
-        <div className="flex justify-center items-center flex-col gap-5">
-          <div className="flex items-center justify-center">
+        </motion.div>
+        <motion.div
+          variants={formVariant}
+          className="flex justify-center items-center flex-col gap-5"
+        >
+          <motion.div
+            variants={formVariant}
+            className="flex items-center justify-center"
+          >
             <img
               src={photo.imgURl}
               alt={photo.title}
@@ -155,11 +210,17 @@ export default function Contact() {
               height={150}
               className="rounded-full grayscale-[50%] opacity-50 transition-all duration-300 hover:opacity-90 hover:grayscale-[0%]"
             />
-          </div>
-          <h4 className="text-shade-green text-2xl font-semibold">
+          </motion.div>
+          <motion.h4
+            variants={formVariant}
+            className="text-shade-green text-2xl font-semibold"
+          >
             Connect with me
-          </h4>
-          <div className="flex gap-8 items-center">
+          </motion.h4>
+          <motion.div
+            variants={formVariant}
+            className="flex gap-8 items-center"
+          >
             <a href="https://github.com/Harishgopal17" target="_blank">
               <AiFillGithub
                 size={45}
@@ -184,9 +245,9 @@ export default function Contact() {
                 className="bg-[#f0466f] text-white rounded-lg cursor-pointer transition-all duration-300 hover:scale-[1.1]"
               />
             </a>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </>
   );
 }
