@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-
 import { projects } from "../constants/index";
 
 export default function NewProject() {
@@ -17,22 +16,24 @@ export default function NewProject() {
   });
 
   return (
-    <div id="Projects" className="relative " ref={ref}>
-      <div className="pt-24 sticky top-0 left-0 scroll-mt-[100px]">
-        <h2 className="text-green text-2xl font-medium">Projects</h2>
+    <div id="Projects" className="relative" ref={ref}>
+      <div className="pt-20 sticky top-0 left-0 scroll-mt-[100px]">
+        <h2 className="text-green text-2xl font-medium pb-5 text-center">
+          Projects
+        </h2>
         <motion.div
           style={{ scaleX }}
           className="h-2 bg-slate-white"
         ></motion.div>
       </div>
       {projects.map((item) => (
-        <Pro key={item.name} item={item} />
+        <ProjectDetails key={item.name} item={item} />
       ))}
     </div>
   );
 }
 
-function Pro({ item }) {
+function ProjectDetails({ item }) {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -44,11 +45,17 @@ function Pro({ item }) {
     <>
       <div className="h-screen snap-center">
         <div className="flex items-center justify-center w-full h-full">
-          <div className="h-full flex justify-center items-center gap-6">
-            <div ref={ref}>
-              <img src={item.imgURL} alt={item.name} />
+          <div className="grid grid-cols-5 justify-center items-center gap-5">
+            <div ref={ref} className="col-span-2">
+              <img
+                src={item.imgURL}
+                alt={item.name}
+                width={1500}
+                height={1500}
+              />
             </div>
-            <motion.div style={{ y }}>
+            <motion.div style={{ y }} className="col-span-3 flex flex-col">
+              <h6 className="text-green text-xl">{item.name}</h6>
               <p>{item.description}</p>
             </motion.div>
           </div>

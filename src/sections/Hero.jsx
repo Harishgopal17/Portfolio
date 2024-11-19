@@ -67,12 +67,13 @@ export default function Hero() {
               className="text-slate-gray text-[22px] lg:text-[28px] font-medium mb-8"
             >
               A self-taught{" "}
-              <span className="text-green lg:text-[32px]">
+              <span className="text-green lg:text-[28px]">
                 <ReactTyped
                   strings={[
                     "Web Developer",
                     "Frontend Developer",
                     "ReactJS Developer",
+                    "MERN Stack Developer",
                   ]}
                   typeSpeed={40}
                   backSpeed={50}
@@ -162,13 +163,17 @@ export default function Hero() {
                     <span className="text-gray-400">{"', '"}</span>
                     <span className="text-amber-300">NodeJS</span>
                     <span className="text-gray-400">{"', '"}</span>
+                    <span className="text-amber-300">Express</span>
+                    <span className="text-gray-400">{"', '"}</span>
+                    <span className="text-amber-300">MongoDB</span>
+                    <span className="text-gray-400">{"', '"}</span>
                     <span className="text-amber-300">Tailwind CSS</span>
                     <span className="text-gray-400">{"', '"}</span>
                     <span className="text-amber-300">Bootstrap</span>
-                    <span className="text-gray-400">{"', '"}</span>
+                    {/* <span className="text-gray-400">{"', '"}</span>
                     <span className="text-amber-300">Framer Motion</span>
                     <span className="text-gray-400">{"', '"}</span>
-                    <span className="text-amber-300">Git</span>
+                    <span className="text-amber-300">Git</span> */}
                     <span className="text-gray-400">{"'],"}</span>
                   </div>
                   <div>
