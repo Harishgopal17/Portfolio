@@ -48,7 +48,15 @@ export default function ProjectCard({ projects }) {
               </div>
             </div>
             <div className="text-base font-normal leading-7 text-slate-whitetext-base">
-              <p>{project.description}</p>
+              {/* <p>{project.description}</p> */}
+              <p>
+                {project.description.split("\n").map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </p>
             </div>
           </div>
         </div>

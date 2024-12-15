@@ -44,28 +44,14 @@ export default function Hero() {
         className="w-full flex items-center justify-center min-h-screen"
       >
         <div className="w-full pt-[100px] grid grid-cols-1 items-center gap-y-8 lg:grid-cols-2 lg:gap-28">
-          <motion.div
-            variants={textvariant}
-            initial="initial"
-            animate="animate"
-            className="flex justify-center flex-col"
-          >
-            <motion.p
-              variants={textvariant}
-              className="text-green text-[18px] mb-2 lg:mb-0 lg:text-[32px] font-medium leading-none"
-            >
+          <div className="flex justify-center flex-col">
+            <p className="text-green text-[18px] mb-2 lg:mb-0 lg:text-[32px] font-medium leading-none">
               Hey there!, I'm-
-            </motion.p>
-            <motion.h1
-              variants={textvariant}
-              className="text-[48px] md:text-[72px] lg:text-[96px] font-bold leading-none mb-3"
-            >
+            </p>
+            <h1 className="text-[48px] md:text-[72px] lg:text-[96px] font-bold leading-none mb-3">
               Harish :&#x29;
-            </motion.h1>
-            <motion.p
-              variants={textvariant}
-              className="text-slate-gray text-[22px] lg:text-[28px] font-medium mb-8"
-            >
+            </h1>
+            <p className="text-slate-gray text-[22px] lg:text-[28px] font-medium mb-8">
               A self-taught{" "}
               <span className="text-green lg:text-[28px]">
                 <ReactTyped
@@ -78,11 +64,11 @@ export default function Hero() {
                   typeSpeed={40}
                   backSpeed={50}
                   loop
-                  startDelay={700}
+                  startDelay={100}
                 />
               </span>
-            </motion.p>
-            <motion.div variants={textvariant} className="flex gap-7 mb-8 ">
+            </p>
+            <div className="flex gap-7 mb-8 ">
               <a
                 href="https://github.com/Harishgopal17"
                 target="_blank"
@@ -106,11 +92,8 @@ export default function Hero() {
                 <BiLogoGmail size={25} />
                 <span className="max-sm:hidden">Mail</span>
               </a>
-            </motion.div>
-            <motion.div
-              variants={textvariant}
-              className="flex-1 flex items-center"
-            >
+            </div>
+            <div className="flex-1 flex items-center">
               <a
                 href={resume.fileURL}
                 target="blank"
@@ -120,10 +103,10 @@ export default function Hero() {
                 <span>Resume</span>
                 <AiOutlineDownload size={25} />
               </a>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
           <div className="flex-1 flex justify-center items-center ">
-            <motion.div
+            <div
               // variants={skillVariant}
               // initial="initial"
               // animate="animate"
@@ -237,7 +220,7 @@ export default function Hero() {
                   </div>
                 </code>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </header>
