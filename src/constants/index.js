@@ -39,7 +39,7 @@ export const projects = [
     name: "Shri Senthil Kumaran Electricals",
     description:
       "Developed a user-friendly, responsive website for Shree Senthil Kumaran Electricals, an electrical and hardware shop based in Tamil Nadu. A tailored design with custom sections highlighting their product offerings, and customer testimonials. The site effectively showcases the brand’s commitment to quality and affordability. Targeted towards homeowners, contractors, and electricians.",
-    projectURL: "https://madrasfoodadvisor.netlify.app",
+    projectURL: "https://ssk-demo.netlify.app",
     githubURL: "https://github.com/Harishgopal17/ssk",
     tools: ["React.js", "Tailwind CSS"],
   },
