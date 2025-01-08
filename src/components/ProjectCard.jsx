@@ -5,7 +5,7 @@ export default function ProjectCard({ projects }) {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="w-full lg:w-[700px] xl:w-[500px] h-auto bg-[#111111] rounded-lg flex flex-col hover:scale-[0.95] transition-all duration-300 cursor-pointer"
+          className="w-full lg:w-[700px] xl:w-[500px] h-auto bg-[#111111] rounded-lg flex flex-col hover:scale-[1.04] transition-all duration-300 cursor-pointer"
         >
           <div className="w-full">
             <img

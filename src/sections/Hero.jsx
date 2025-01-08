@@ -123,7 +123,7 @@ export default function Hero() {
                 <code className="font-mono text-sm lg:text-base">
                   <div className="blink">
                     <span className="mr-2 text-pink-500">const</span>
-                    <span className="mr-2 text-white">coder</span>
+                    <span className="mr-2 text-white">developer</span>
                     <span className="mr-2 text-pink-500">=</span>
                     <span className="text-gray-400">{"{"}</span>
                   </div>
