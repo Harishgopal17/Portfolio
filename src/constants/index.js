@@ -1,4 +1,5 @@
 import tequiz from "./../assets/images/tequiz.png";
+import grouptalk from "./../assets/images/grouptalk.png";
 import ssk from "./../assets/images/ssk.png";
 import madrasfoodadvisor from "./../assets/images/madrasfoodadvisor.png";
 import breaktheroutine from "./../assets/images/breaktheroutine.png";
@@ -29,10 +30,18 @@ export const projects = [
   {
     imgURL: tequiz,
     name: "Tequiz",
-    description: `Developed Tequiz, an engaging quiz web application built using React.js for the frontend, Express.js for the backend, and MongoDB for the database. The application features user authentication, interactive quizzes, real-time score tracking, and a dedicated section with handpicked resources to help users learn and enhance their tech skills. If you don't want to create an account, use the following credentials to log in:\n User: guest@gmail.com\n Password: pass1234`,
+    description: `Developed Tequiz, an engaging quiz web application built using React.js, Express.js, and MongoDB. The application features user authentication, interactive quizzes, real-time score tracking, and a dedicated section with handpicked resources to help users learn and enhance their tech skills. If you don't want to create an account, use the following credentials to log in:\n User: guest@gmail.com\n Password: pass1234`,
     projectURL: "https://tequiz.netlify.app",
     githubURL: "https://github.com/Harishgopal17/Tequiz",
-    tools: ["React.js", "Express", "Mongo DB"],
+    tools: ["React.js", "Tailwind CSS", "Express", "Mongo DB"],
+  },
+  {
+    imgURL: grouptalk,
+    name: "Grouptalk",
+    description: `A real-time chat application built with React.js, Tailwind CSS, Node.js, Express.js, and Socket.IO, enabling users to join chat rooms instantly without authentication. Designed for seamless and responsive communication across devices.`,
+    projectURL: "https://joingrouptalk.netlify.app",
+    githubURL: "https://github.com/Harishgopal17/GroupTalk",
+    tools: ["React.js", "Tailwind CSS", "Express", "Socket.IO"],
   },
   {
     imgURL: ssk,
@@ -44,21 +53,21 @@ export const projects = [
     tools: ["React.js", "Tailwind CSS"],
   },
   {
-    imgURL: madrasfoodadvisor,
-    name: "Madras Food Advisor",
-    description:
-      "Madras Food Advisor is a passion project dedicated to celebrating the rich culinary heritage of Chennai. The project aims to connect food enthusiasts with the vibrant flavors and hidden gems of South Indian cuisine. From traditional recipes to modern dining experiences.",
-    projectURL: "https://madrasfoodadvisor.netlify.app",
-    githubURL: "https://github.com/Harishgopal17/Madras-food-advisor",
-    tools: ["Html", "CSS", "Java Script"],
-  },
-  {
     imgURL: breaktheroutine,
     name: "Break the Routine",
     description:
       "Developed and implemented a dynamic system for suggesting random activities to get relief from the routine work. We sift through the random data to find activities that give you a new experience. Curated a diverse array of activities spanning physical fitness, cultural immersion, skill development, relaxation techniques, and random foods, ensuring a comprehensive and engaging experience.",
     projectURL: "https://breaktheroutine.netlify.app/",
     githubURL: "https://github.com/Harishgopal17/break_the_routine",
+    tools: ["Html", "CSS", "Java Script"],
+  },
+  {
+    imgURL: madrasfoodadvisor,
+    name: "Madras Food Advisor",
+    description:
+      "Madras Food Advisor is a passion project dedicated to celebrating the rich culinary heritage of Chennai. The project aims to connect food enthusiasts with the vibrant flavors and hidden gems of South Indian cuisine. From traditional recipes to modern dining experiences.",
+    projectURL: "https://madrasfoodadvisor.netlify.app",
+    githubURL: "https://github.com/Harishgopal17/Madras-food-advisor",
     tools: ["Html", "CSS", "Java Script"],
   },
   {
